@@ -1,0 +1,16 @@
+[
+    {
+        "resourceId": "vm1",
+        "cost": 10.0,
+        "currency": "USD",
+        "usageDate": "2025-01-01",
+        "meterCategory": "Compute"
+    },
+    {
+        "resourceId": "storage1",
+        "cost": 5.5,
+        "currency": "USD",
+        "usageDate": "2025-01-01",
+        "meterCategory": "Storage"
+    }
+]
