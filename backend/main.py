@@ -1,6 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import logging
+import os
+
+APP_ENV = os.getenv("APP_ENV", "dev")
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -20,6 +23,10 @@ app.add_middleware(
 @app.get("/")
 def root():
     return {"message": "API is running"}
+
+@app.get("/env")
+def get_env():
+    return {"environment": APP_ENV}
 
 # Register routes
 app.include_router(cost_router)

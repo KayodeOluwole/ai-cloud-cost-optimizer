@@ -16,4 +16,5 @@ COPY . .
 EXPOSE 8000
 
 # Start FastAPI server
+ENV APP_ENV=production
 CMD ["uvicorn",
